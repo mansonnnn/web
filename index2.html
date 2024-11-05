@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/diseño.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form id="login-form" method="post">
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Ingresar</button>
+            <a href="registrar.html">No tienes una cuenta ¿Deseas crear una?</a>
+        </form>
+    </div>
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verificar credenciales
+            const user = users.find(user => user.username === username && user.password === password);
+            if (user) {
+                alert(`Bienvenido ${user.nombre}!`);
+                // Redirigir a la página de bienvenida
+                window.location.href = `index.html?nombre=${encodeURIComponent(user.nombre)}`;
+            } else {
+                alert('Usuario o contraseña incorrectos.');
+            }
+        });
+    </script>
+</body>
+</html>
+

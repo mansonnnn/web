@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain y Criptomonedas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Blockchain y Criptomonedas</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="registrar.html">Registrate</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quienes-somos.html">¿Quiénes somos?</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+     <div class="container">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Blockchain')">Blockchain</button>
+            <button class="tablinks" onclick="openTab(event, 'Criptomonedas')">Criptomonedas</button>
+            
+            
+        </div>
+
+        <div id="Blockchain" class="tabcontent">
+            <h2>Blockchain</h2> 
+            <center>
+                <img src="images/92417bb0ffb3608c48b961388940fd98.jpg"   width="600"   alt="Blockchain">
+            </center>
+            
+            <p><strong>Definición:</strong> Blockchain es una tecnología de registro distribuido que permite la creación de un libro de contabilidad digital inmutable y transparente...</p>
+            <p><strong>Origen:</strong> El concepto de blockchain fue introducido por primera vez en 2008 por una persona o grupo de personas bajo el alias de Satoshi Nakamoto...</p>
+            
+            <p><strong>Tipos de Blockchain:</strong></p>
+            <ol>
+                <li>Blockchain Público: Acceso abierto a cualquier persona. Ejemplos: Bitcoin, Ethereum.</li>
+                <li>Blockchain Privado: Controlado por una sola organización. Ejemplos: Hyperledger Fabric, R3 Corda.</li>
+                <li>Blockchain Consorciado (o Federado): Controlado por un grupo de organizaciones. Ejemplo: Quorum.</li>
+                <li>Blockchain Híbrido: Combinación de público y privado. Ejemplo: Dragonchain.</li>
+            </ol>
+
+            <div class="video"> 
+                <center>
+                    <video src="video/llll.mp4" controls width="500" alt=""></video>
+                </center>
+            </div>
+            
+            <p><strong>Aplicaciones:</strong></p>
+            <ul>
+                <li>Finanzas: Transacciones bancarias, pagos internacionales.</li>
+                <li>Salud: Gestión de registros médicos.</li>
+                <li>Cadena de Suministro: Seguimiento de productos desde la fuente hasta el consumidor.</li>
+                <li>Gobierno: Votación electrónica, registros públicos.</li>
+            </ul>
+        </div>
+
+        <div id="Criptomonedas" class="tabcontent">
+            <h2>Criptomonedas</h2>
+
+            <center>
+                <img src="images/18443.jpeg"   width="600"   alt="Criptomonedas">
+            </center>
+            
+            <p><strong>Definición:</strong> Una criptomoneda es un medio de intercambio digital que utiliza criptografía para asegurar las transacciones...</p>
+            <p><strong>Origen:</strong> La primera criptomoneda, Bitcoin, fue creada por Satoshi Nakamoto en 2009...</p>
+           
+            
+            <p><strong>Tipos de Criptomonedas:</strong></p>
+            <ol>
+                <li>Criptomonedas de Capa 1: Bitcoin, Ethereum.</li>
+                <li>Criptomonedas de Capa 2: Lightning Network (para Bitcoin), Plasma (para Ethereum).</li>
+                <li>Stablecoins: Tether (USDT), USD Coin (USDC).</li>
+                <li>Tokens de Seguridad: Tokens que representan activos reales.</li>
+                <li>Tokens de Utilidad: Tokens que proporcionan acceso a servicios o productos.</li>
+            </ol>
+             
+            <div class="video"> 
+                <center>
+                    <video src="video/Blockchain.mp4" controls width="500" alt=""></video>
+                </center>
+            </div>
+
+            <p><strong>Aplicaciones:</strong></p>
+            <ul>
+                <li>Pagos: Transferencias internacionales, pagos en línea.</li>
+                <li>Inversión: Activos de inversión digitales.</li>
+                <li>DeFi: Préstamos, intercambio descentralizado.</li>
+                <li>NFTs: Comprar y vender obras de arte digital y otros activos únicos.</li>
+            </ul>
+            <p><strong>Ventajas:</strong></p>
+            <ul>
+                <li>Descentralización: No controlado por una entidad central.</li>
+                <li>Seguridad: Uso de criptografía para proteger transacciones.</li>
+                <li>Transparencia: Registros públicos y verificables.</li>
+                <li>Eficiencia: Menos costos de transacción y tiempo de procesamiento.</li>
+            </ul>
+            <p><strong>Desafíos:</strong></p>
+            <ul>
+                <li>Volatilidad: Precios altamente fluctuantes.</li>
+                <li>Regulación: Incertidumbre y variabilidad en la regulación global.</li>
+                <li>Escalabilidad: Problemas de rendimiento y capacidad de procesamiento.</li>
+                <li>Seguridad: Riesgos de ataques y vulnerabilidades.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Mostrar la primera pestaña por defecto
+        document.getElementById("Blockchain").style.display = "block";
+        document.getElementsByClassName("tablinks")[0].className += " active";
+        document.getElementsByClassName("tablinks")[1].className += " active";
+    </script>
+
+
+
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Blockchain y Criptomonedas. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
